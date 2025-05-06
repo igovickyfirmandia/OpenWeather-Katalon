@@ -34,23 +34,23 @@ assert json.cod == "200"
 def listMainData = json.list[0].main
 
 //assert temp is present
-assert listMainData.main.containsKey('temp')
+assert listMainData.containsKey('temp')
 //assert feels_like is present
-assert listMainData.main.containsKey('feels_like')
+assert listMainData.containsKey('feels_like')
 //assert temp_min is present
-assert listMainData.main.containsKey('temp_min')
+assert listMainData.containsKey('temp_min')
 //assert temp_max is present
-assert listMainData.main.containsKey('temp_max')
+assert listMainData.containsKey('temp_max')
 //assert pressure is present
-assert listMainData.main.containsKey('pressure')
+assert listMainData.containsKey('pressure')
 //assert sea_level is present
-assert listMainData.main.containsKey('sea_level')
+assert listMainData.containsKey('sea_level')
 //assert grnd_level is present
-assert listMainData.main.containsKey('grnd_level')
+assert listMainData.containsKey('grnd_level')
 //assert humidity is present
-assert json.list[0].main.containsKey('humidity')
+assert listMainData.containsKey('humidity')
 //assert temp_kf is present
-assert json.list[0].main.containsKey('temp_kf')
+assert listMainData.containsKey('temp_kf')
 
 //print value temp, feels_like, temp_min, temp_max, pressure, sea_level, grnd_level, humidity, temp_kf
 println("temp: " + json.list[0].main.temp)

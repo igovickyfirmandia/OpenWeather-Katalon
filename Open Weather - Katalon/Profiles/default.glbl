@@ -27,7 +27,7 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
-      <name>lattitude</name>
+      <name>latitude</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>

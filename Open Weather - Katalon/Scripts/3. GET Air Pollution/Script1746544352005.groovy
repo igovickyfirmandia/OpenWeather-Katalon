@@ -17,3 +17,33 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import groovy.json.JsonSlurper
+
+//send request to API GET Air Pollution
+def response = WS.sendRequest(findTestObject('Object Repository/GET Air Pollution/GET Air Pollution'))
+
+//parsing response JSON
+def json = new JsonSlurper().parseText(response.getResponseText())
+
+//assert status code 200
+WS.verifyResponseStatusCode(response, 200)
+
+//assert lon & lat is present
+assert json.coord.containsKey('lon')
+assert json.coord.containsKey('lat')
+
+//get list[0].components
+def listComponents = json.list[0].components
+
+//assert list[0].components contains co/no/no2/o3/so2/pm2_5/pm10/nh3
+assert listComponents.containsKey('co')
+assert listComponents.containsKey('no')
+assert listComponents.containsKey('no2')
+assert listComponents.containsKey('03')
+assert listComponents.containsKey('so2')
+assert listComponents.containsKey('pm2_5')
+assert listComponents.containsKey('pm10')
+assert listComponents.containsKey('nh3')
+
+//print the value
+
+

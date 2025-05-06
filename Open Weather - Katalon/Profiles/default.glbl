@@ -4,4 +4,34 @@
    <name>default</name>
    <tag></tag>
    <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://api.openweathermap.org'</initValue>
+      <name>basic_URL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>API Key</description>
+      <initValue>'a4a05e5964a1abdc935c5ec80c5f4bc1'</initValue>
+      <name>appid</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Jakarta Selatan'</initValue>
+      <name>q</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>1</initValue>
+      <name>limit</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>lat</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>lon</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

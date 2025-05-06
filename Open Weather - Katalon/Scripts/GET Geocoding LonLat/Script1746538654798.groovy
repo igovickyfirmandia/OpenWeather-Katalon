@@ -31,11 +31,18 @@ def longitude = json[0].lon
 //get ID Jakarta Selatan for assertion
 def idJaksel = json[0].local_names.id
 
+//assert idJaksel = Jakarta Selatan
+assert idJaksel == 'Jakarta Selatan'
+
+//assert lon & lat is present
+assert latitude != null
+assert longitude != null
+
 //set value to global variable
 GlobalVariable.latitude = latitude
 GlobalVariable.longitude = longitude
 
-//assert
+//print the value
 println("Latitude: " + latitude)
 println("Longitude: " + longitude)
 println("idJaksel: " + idJaksel)

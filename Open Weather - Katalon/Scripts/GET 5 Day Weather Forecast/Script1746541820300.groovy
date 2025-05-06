@@ -33,24 +33,21 @@ assert jsonResponse.cod == "200" : "Expected cod to be 200, but got " + jsonResp
 //get list[0].main data
 def listMainData = jsonResponse.list[0].main
 
-// ✅ 2. Assert setiap field
-assertThat(listMainData.temp).isNotNull()
-assertThat(listMainData.feels_like).isNotNull()
-assertThat(listMainData.temp_min).isNotNull()
-assertThat(listMainData.temp_max).isNotNull()
-assertThat(listMainData.pressure).isNotNull()
-assertThat(listMainData.sea_level).isNotNull()
-assertThat(listMainData.grnd_level).isNotNull()
-assertThat(listMainData.humidity).isNotNull()
-assertThat(listMainData.temp_kf).isNotNull()
-
-// (Optional) Cetak nilainya ke console untuk debugging
-println "Temp: ${mainData.temp}"
-println "Feels Like: ${mainData.feels_like}"
-println "Temp Min: ${mainData.temp_min}"
-println "Temp Max: ${mainData.temp_max}"
-println "Pressure: ${mainData.pressure}"
-println "Sea Level: ${mainData.sea_level}"
-println "Ground Level: ${mainData.grnd_level}"
-println "Humidity: ${mainData.humidity}"
-println "Temp KF: ${mainData.temp_kf}"
+//assert temp is present
+assert jsonResponse.list[0].main.containsKey('temp')
+//assert feels_like is present
+assert jsonResponse.list[0].main.containsKey('feels_like')
+//assert temp_min is present
+assert jsonResponse.list[0].main.containsKey('temp_min')
+//assert temp_max is present
+assert jsonResponse.list[0].main.containsKey('temp_max')
+//assert pressure is present
+assert jsonResponse.list[0].main.containsKey('pressure')
+//assert sea_level is present
+assert jsonResponse.list[0].main.containsKey('sea_level')
+//assert grnd_level is present
+assert jsonResponse.list[0].main.containsKey('grnd_level')
+//assert humidity is present
+assert jsonResponse.list[0].main.containsKey('humidity')
+//assert temp_kf is present
+assert jsonResponse.list[0].main.containsKey('temp_kf')

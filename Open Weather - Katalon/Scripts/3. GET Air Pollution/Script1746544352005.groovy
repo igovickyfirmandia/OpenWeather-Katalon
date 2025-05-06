@@ -38,12 +38,19 @@ def listComponents = json.list[0].components
 assert listComponents.containsKey('co')
 assert listComponents.containsKey('no')
 assert listComponents.containsKey('no2')
-assert listComponents.containsKey('03')
+assert listComponents.containsKey('o3')
 assert listComponents.containsKey('so2')
 assert listComponents.containsKey('pm2_5')
 assert listComponents.containsKey('pm10')
 assert listComponents.containsKey('nh3')
 
 //print the value
-
+println("co: " + listComponents.co)
+println("no: " + listComponents.no)
+println("no2: " + listComponents.no2)
+println("o3: " + listComponents.o3)
+println("so2: " + listComponents.so2)
+println("pm2_5: " + listComponents.pm2_5)
+println("pm10: " + listComponents.pm10)
+println("nh3: " + listComponents.nh3)
 

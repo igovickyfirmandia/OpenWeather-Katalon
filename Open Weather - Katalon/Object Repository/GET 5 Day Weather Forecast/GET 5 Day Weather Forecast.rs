@@ -16,7 +16,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.basic_URL}/data/2.5/forecast?lat=-6.28381815&amp;lon=106.80486324917382&amp;appid=${GlobalVariable.appid}</restUrl>
+   <restUrl>${GlobalVariable.basic_URL}/data/2.5/forecast?lat=${GlobalVariable.latitude}&amp;lon=${GlobalVariable.longitude}&amp;appid=${GlobalVariable.appid}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

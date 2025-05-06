@@ -51,3 +51,14 @@ assert json.list[0].main.containsKey('grnd_level')
 assert json.list[0].main.containsKey('humidity')
 //assert temp_kf is present
 assert json.list[0].main.containsKey('temp_kf')
+
+//print value temp, feels_like, temp_min, temp_max, pressure, sea_level, grnd_level, humidity, temp_kf
+println("temp: " + json.list[0].main.temp)
+println("feels_like: " + json.list[0].main.feels_like)
+println("temp_min: " + json.list[0].main.temp_min)
+println("temp_max: " + json.list[0].main.temp_max)
+println("pressure: " + json.list[0].main.pressure)
+println("sea_level: " + json.list[0].main.sea_level)
+println("grnd_level: " + json.list[0].main.grnd_level)
+println("humidity: " + json.list[0].main.humidity)
+println("temp_kf: " + json.list[0].main.temp_kf)

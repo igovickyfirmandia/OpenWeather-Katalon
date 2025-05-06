@@ -28,10 +28,15 @@ def json = new JsonSlurper().parseText(response.getResponseText())
 def latitude = json[0].lat
 def longitude = json[0].lon
 
+//get ID Jakarta Selatan for assertion
+def idJaksel = json[0].local_names.id
+
 //set value to global variable
 GlobalVariable.latitude = latitude
 GlobalVariable.longitude = longitude
 
-// Debug print
+//assert
 println("Latitude: " + latitude)
 println("Longitude: " + longitude)
+println("idJaksel: " + idJaksel)
+

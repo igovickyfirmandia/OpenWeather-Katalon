@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>GET Geocoding</name>
+   <name>GET 5 Day Weather Forecast</name>
    <tag></tag>
-   <elementGuidId>3d44873d-8a68-40f7-b6d5-2cd67e050b36</elementGuidId>
+   <elementGuidId>0040179b-2e7a-4934-8e4a-44c5da969983</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <autoUpdateContent>true</autoUpdateContent>
@@ -16,7 +16,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.basic_URL}/geo/1.0/direct?q=${GlobalVariable.q}&amp;limit=${GlobalVariable.limit}&amp;appid=${GlobalVariable.appid}</restUrl>
+   <restUrl>${GlobalVariable.basic_URL}/data/2.5/forecast?lat=-6.28381815&amp;lon=106.80486324917382&amp;appid=${GlobalVariable.appid}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

@@ -15,7 +15,7 @@
       <name>appid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
+      <description>City ID</description>
       <initValue>'Jakarta Selatan'</initValue>
       <name>q</name>
    </GlobalVariableEntity>
@@ -27,11 +27,11 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
-      <name>lat</name>
+      <name>lattitude</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
-      <name>lon</name>
+      <name>longitude</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

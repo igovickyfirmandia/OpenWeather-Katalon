@@ -16,38 +16,38 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import groovy.json.JsonSlurper
 
 //send request to API GET 5 Day Weather Forecast
 def response = WS.sendRequest(findTestObject('Object Repository/GET 5 Day Weather Forecast/GET 5 Day Weather Forecast'))
 
 //parsing response JSON
-def slurper = new JsonSlurper()
-def jsonResponse = slurper.parseText(response.getResponseBodyContent())
+def json = new JsonSlurper().parseText(response.getResponseText())
 
 //assert status code 200
 WS.verifyResponseStatusCode(response, 200)
 
 //assert cod = 200
-assert jsonResponse.cod == "200" : "Expected cod to be 200, but got " + jsonResponse.cod
+assert json.cod == "200" : "Expected cod to be 200, but got " + json.cod
 
 //get list[0].main data
-def listMainData = jsonResponse.list[0].main
+def listMainData = json.list[0].main
 
 //assert temp is present
-assert jsonResponse.list[0].main.containsKey('temp')
+assert json.list[0].main.containsKey('temp')
 //assert feels_like is present
-assert jsonResponse.list[0].main.containsKey('feels_like')
+assert json.list[0].main.containsKey('feels_like')
 //assert temp_min is present
-assert jsonResponse.list[0].main.containsKey('temp_min')
+assert json.list[0].main.containsKey('temp_min')
 //assert temp_max is present
-assert jsonResponse.list[0].main.containsKey('temp_max')
+assert json.list[0].main.containsKey('temp_max')
 //assert pressure is present
-assert jsonResponse.list[0].main.containsKey('pressure')
+assert json.list[0].main.containsKey('pressure')
 //assert sea_level is present
-assert jsonResponse.list[0].main.containsKey('sea_level')
+assert json.list[0].main.containsKey('sea_level')
 //assert grnd_level is present
-assert jsonResponse.list[0].main.containsKey('grnd_level')
+assert json.list[0].main.containsKey('grnd_level')
 //assert humidity is present
-assert jsonResponse.list[0].main.containsKey('humidity')
+assert json.list[0].main.containsKey('humidity')
 //assert temp_kf is present
-assert jsonResponse.list[0].main.containsKey('temp_kf')
+assert json.list[0].main.containsKey('temp_kf')

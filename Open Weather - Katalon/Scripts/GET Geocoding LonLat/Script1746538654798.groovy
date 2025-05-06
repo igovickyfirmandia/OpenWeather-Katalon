@@ -40,3 +40,5 @@ println("Latitude: " + latitude)
 println("Longitude: " + longitude)
 println("idJaksel: " + idJaksel)
 
+//assert status code 200
+WS.verifyResponseStatusCode(response, 200)

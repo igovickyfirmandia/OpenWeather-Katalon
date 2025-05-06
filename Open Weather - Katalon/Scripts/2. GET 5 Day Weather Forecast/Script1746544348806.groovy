@@ -28,25 +28,25 @@ def json = new JsonSlurper().parseText(response.getResponseText())
 WS.verifyResponseStatusCode(response, 200)
 
 //assert cod = 200
-assert json.cod == "200" : "Expected cod to be 200, but got " + json.cod
+assert json.cod == "200"
 
 //get list[0].main data
 def listMainData = json.list[0].main
 
 //assert temp is present
-assert json.list[0].main.containsKey('temp')
+assert listMainData.main.containsKey('temp')
 //assert feels_like is present
-assert json.list[0].main.containsKey('feels_like')
+assert listMainData.main.containsKey('feels_like')
 //assert temp_min is present
-assert json.list[0].main.containsKey('temp_min')
+assert listMainData.main.containsKey('temp_min')
 //assert temp_max is present
-assert json.list[0].main.containsKey('temp_max')
+assert listMainData.main.containsKey('temp_max')
 //assert pressure is present
-assert json.list[0].main.containsKey('pressure')
+assert listMainData.main.containsKey('pressure')
 //assert sea_level is present
-assert json.list[0].main.containsKey('sea_level')
+assert listMainData.main.containsKey('sea_level')
 //assert grnd_level is present
-assert json.list[0].main.containsKey('grnd_level')
+assert listMainData.main.containsKey('grnd_level')
 //assert humidity is present
 assert json.list[0].main.containsKey('humidity')
 //assert temp_kf is present
